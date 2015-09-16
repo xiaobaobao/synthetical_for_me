@@ -17,14 +17,11 @@ package com.xb.global;
 
 // TODO: Auto-generated Javadoc
 
+
 /**
- * © 2012 amsoft.cn
- * 名称：AbConstant.java 
- * 描述：常量.
- *
- * @author 还如一梦中
- * @version v1.0
- * @date：2013-10-16 下午1:33:39
+ * @todo 常量
+ * @author xiaobao
+ * @time 2015-9-15 下午11:41:48
  */
 public class Constant {
 	

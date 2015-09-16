@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
+/**
+ * @todo TODO
+ * @author xiaobao
+ * @time 2015-9-15 下午11:12:16
+ */
 public class MainActivity extends ActionBarActivity {
 
     @Override

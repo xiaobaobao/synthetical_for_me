@@ -13,6 +13,9 @@ package com.xb.global;
 public class Config {
 	
 	
+	/** 默认SharedPreferences的地址. */
+	public static  String SHARED_PATH = "sharedPreferences_path";
+	
 	/** 默认下载文件地址. */
 	public static  String DOWNLOAD_ROOT_DIR = "download";
 	
@@ -31,6 +34,9 @@ public class Config {
 	/** 异常Exception目录. */
 	public static  String EXCEPTION_DIR = "exception";
 
+	
+	
+	
 	
 
 }

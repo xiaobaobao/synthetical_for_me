@@ -1,6 +1,8 @@
 package com.yy.application;
 
-import com.xb.application.XbAplication;
+import com.xb.global.GlobalContext;
+
+
 
 
 /**
@@ -8,7 +10,7 @@ import com.xb.application.XbAplication;
  * @author: xiaobao
  * @time: 2015-9-15下午4:57:20
  */
-public class AppAplication extends  XbAplication{
+public class AppAplication  extends  GlobalContext{
 	
 	@Override
 	public void onCreate() {

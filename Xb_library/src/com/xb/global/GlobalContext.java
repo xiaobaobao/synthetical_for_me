@@ -1,9 +1,10 @@
-package com.xb.application;
+package com.xb.global;
 
 import android.app.Application;
 
 import com.xb.utils.ExceptionHandler;
 import com.xb.utils.FileUtil;
+import com.xb.utils.SharedUtil;
 
 
 /**
@@ -11,31 +12,31 @@ import com.xb.utils.FileUtil;
  * @author: xiaobao
  * @time: 2015-9-15上午10:22:49
  */
-public class XbAplication extends Application {
+public class GlobalContext extends Application {
 	
 	
 	/** 当前应用 */
-	private static XbAplication xbAplication = null;
+	private static GlobalContext globalContext = null;
 
 	/**
 	 * 私有构造方法
 	 */
-	protected XbAplication() {
+	protected GlobalContext() {
 	
 	}
 
 	/**
 	 * 获取当前应用
 	 */
-	public static XbAplication getInstance() {
-		if (xbAplication == null) {
-			synchronized (XbAplication.class) {
-				if (xbAplication == null) {
-					xbAplication = new XbAplication();
+	public static GlobalContext getInstance() {
+		if (globalContext == null) {
+			synchronized (GlobalContext.class) {
+				if (globalContext == null) {
+					globalContext = new GlobalContext();
 				}
 			}
 		}
-		return xbAplication;
+		return globalContext;
 	}
 
 	
@@ -52,7 +53,11 @@ public class XbAplication extends Application {
 	 * 初始化配置
 	 */
 	private void initConfig() {
-		//必须在setExceptionHandler前
+		
+		//SharedPreferences 中的Context 必须在这里初始化
+		SharedUtil.config(this);
+		
+		//设置缓存的路径,必须在setExceptionHandler前
 		initCache();
 		
 		setExceptionHandler();
