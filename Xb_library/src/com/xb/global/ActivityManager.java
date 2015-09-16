@@ -9,6 +9,7 @@ import android.app.Activity;
 /**
  * @todo: 用于处理退出程序时可以退出所有的activity，而编写的通用类
  * @author: xiaobao
+ * 
  * @time: 2015-9-15下午4:23:28
  */
 public class ActivityManager {
